@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Galeria Aesthetic</title>
+    <style>
+        /* Configurações de Estilo Geral */
+        body {
+            background-color: #f0eef1; /* Tom pastel de fundo */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #b5838d; /* Rosa antigo */
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        /* Container da Galeria */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 15px;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        /* Estilo de cada Item/Imagem */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+            display: block;
+            filter: grayscale(20%) brightness(90%); /* Toque vintage */
+            transition: all 0.5s ease;
+        }
+
+        /* Efeito de Hover (Passar o mouse) */
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-item:hover img {
+            filter: grayscale(0%) brightness(100%);
+        }
+
+        /* Overlay com texto (Opcional) */
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.7);
+            color: #6d6875;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.9rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Moodboard</h1>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?q=80&w=500" alt="Pôr do sol">
+            <div class="overlay">Golden Hour</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=500" alt="Plantas">
+            <div class="overlay">Natureza</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1528459801416-a7e99a0d13a3?q=80&w=500" alt="Abstrato">
+            <div class="overlay">Abstrato</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1444930694458-01babf71870c?q=80&w=500" alt="Café">
+            <div class="overlay">Cozy Vibes</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=500" alt="Câmera">
+            <div class="overlay">Vintage</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=500" alt="Arquitetura">
+            <div class="overlay">Minimalismo</div>
+        </div>
+    </div>
+
+</body>
+</html>
